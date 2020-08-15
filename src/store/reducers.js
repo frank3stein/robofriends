@@ -6,7 +6,7 @@ import { combineReducers } from 'redux';
 const robots = (state = [], action) => {
     switch (action.type) {
         case GET_ROBOTS:
-            return [...state, ...action.robots];
+            return [...action.robots];
         default:
             return state;
     }

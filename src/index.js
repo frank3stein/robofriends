@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
-import Robots from './Home';
-import { robots } from './robots';
+import App from './App'
+import { Provider } from 'react-redux'
+import store from './store/store'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Robots robots={robots} />
+
+    <Provider store={store}>
+      <App></App>
+    </Provider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

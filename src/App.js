@@ -33,9 +33,11 @@ export default () => {
     }, [search, robotusers])
     return (
         <>
-            <main className="tc" >
+            <main className="tc" style={{
+                background: "linear-gradient(to right, rgba(7,27,82,1) 0%, rgba(0,128,128,1), 100%)"
+            }}>
                 <Header setSearch={setSearch} title="Robofriends" />
-                <CardList robots={filteredRobots(robotusers, search)} />
+                <CardList robots={filteredRobots} />
             </main>
 
         </>
