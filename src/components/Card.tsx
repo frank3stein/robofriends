@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({ username, id, name, email }) => {
+export default ({ username, name, email }: { username: string; name: string; email: string }) => {
     return (
         <div className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-2'>
             <img src={`https://robohash.org/${username}?200x200`} alt="Robots" />

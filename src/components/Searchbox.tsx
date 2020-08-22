@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default ({ setSearch }) => {
+export default React.memo(({ setSearch }) => {
     return (
         <div className="pa2">
 
@@ -9,4 +9,4 @@ export default ({ setSearch }) => {
         </div>
     );
 
-}
+})
