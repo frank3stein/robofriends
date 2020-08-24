@@ -1,1 +1,0 @@
-export const _fetchRobots = () => fetch('https://jsonplaceholder.typicode.com/users').then(robots => robots.json());

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default React.memo(({ setSearch }) => {
+export default React.memo(({ setSearch }: { setSearch: React.Dispatch<React.SetStateAction<string>> }) => {
     return (
         <div className="pa2">
 

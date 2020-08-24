@@ -2,7 +2,10 @@ import React from 'react';
 import SearchBox from './Searchbox'
 
 
-const Header = ({ setSearch, title }) => {
+const Header = ({ setSearch, title }: {
+    setSearch: React.Dispatch<React.SetStateAction<string>>;
+    title: string
+}) => {
     return (
         <header style={{
             position: 'sticky',

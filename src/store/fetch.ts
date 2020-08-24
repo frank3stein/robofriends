@@ -1,0 +1,1 @@
+export const _fetchRobots = (): Promise<Array<Robot>> => fetch('https://jsonplaceholder.typicode.com/users').then(robots => robots.json());

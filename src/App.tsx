@@ -1,23 +1,23 @@
-import React, { useState, useEffect, ReactElement, FunctionComponent } from "react";
+import React, { useState, useEffect, FunctionComponent } from "react";
 import CardList from './components/CardList';
 import Header from './components/Header'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchRobots } from "./store/actions";
+import { fetchRobots } from "./store";
 
 interface RootState {
     robots: Array<Robot>
 }
 
-const filteredRobots = (robots: Array<Robot>, search: string) => robots.filter(
-    (user: Robot) => {
-        console.log('Filter running')
-        return user.name.toLowerCase().includes(search.toLowerCase())
-    })
+// const filteredRobots = (robots: Array<Robot>, search: string) => robots.filter(
+//     (user) => {
+//         console.log('Filter running')
+//         return user.name.toLowerCase().includes(search.toLowerCase())
+//     })
 
 const App: FunctionComponent = (): JSX.Element => {
     const [search, setSearch] = useState<string>('');
     const [isFetching, setIsFetcthing] = useState<null | boolean>(null);
-    const selector = (state: { robots: Array<Robot> }): Array<Robot> => state.robots;
+    const selector = (state: RootState): Array<Robot> => state.robots;
     const robotusers = useSelector(selector);
     const [filteredRobots, setFilteredRobots] = useState<Array<Robot>>(robotusers)
     console.log("Robousers ", robotusers)
